@@ -1,0 +1,144 @@
+The Shell
+Version 1.0.0
+
+Commands 
+You must enter these commands on the command line prompt to execute these commands in order to complete your tasks. All the commands with the information are listed below:
+
+cd .. – This will change the current working directory to the previous directory, if a directory exists.
+
+cd <filename> – This will go the directory with the file name given. 
+
+mkdir <name> – This will create a new directory on the name given.
+
+rmdir <name> – This will delete the directory on the name given. 
+
+clr – This will clear all the current information displayed on the command line.
+
+quit – This will quit the shell and the shell will exit. You will be out of the shell onto the normal command line.
+
+echo <comment> – This will display the comment given on the system below. The way this is done is that you would have to type echo, and then press space and enter your comment. After that, underneath the comment is where the given comment is going to be outputted in the system. 
+
+(This is a mistake in the shell system which will be resolved in the next versions when the shell needs to be updated.)
+
+pwd – This will show the current file path of the current working directory. 
+
+rm <filename> – This will delete the file. 
+
+environ – This will list all the environmental strings.
+
+help – This will display the readme manual which will give you all the information about how to use this shell with the internal commands.
+ 
+date – This will display the current date according to the actual calendar date. 
+
+cp <filename> – Using this you can copy a file from one directory to another directory.
+
+bg – This is moving the current job to the background.
+
+fg – This this is moving the current job to the stage. 
+
+dir – This is listing all the directories with their information and shows the total number of files inside the directory. 
+
+this – This is calculating the time for cutting the process. 
+
+kill – This is used for killing a current running process. 
+
+pause – Use this to pause the shell and then press enter to continue.
+
+jobs – you can see what is running in the background as well as what has been completed.
+
+
+About Redirection
+You must enter this in order to make the correct outputs. These are the following redirection which have been supported and these include the following: ‘>’, ‘<’, ‘>>’. You can see how to use these in the examples below:
+
+-----------------------------------------------------------------------------------------
+ls > <name> - This will save an output to the file. 
+prompt> ls 
+file1 
+file2 
+file3
+prompt> ls > file4
+prompt> ls 
+prompt> 
+file1 
+file2 
+file3
+file4
+
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+ls >> <name> - Append output from a file.  
+prompt> cat myoutput 
+file1 
+file2 
+file3
+prompt> ls >> myoutput 
+prompt> cat myoutput
+file1
+file2 
+file3
+file1
+file2 
+file3
+
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+
+ls < <name> - Read the input from the file.  (combining two forms of redirection into a single command)
+prompt> cat myoutput 
+file1 
+file2 
+file3
+prompt> echo -l < file1 > myoutput  
+prompt> cat myoutput
+-l
+
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+
+ls < <name> - Read the input from the file.  
+prompt> cat myoutput 
+file1 
+file2 
+file3
+prompt> echo -l < myoutput  
+-l
+
+-----------------------------------------------------------------------------------------
+
+
+
+About Background
+When the user enters the (& symbol) at the end of the command line then the commands will still be running in the background as the terminal window won’t even be required but, the job will still be running. An example, a user wants to install a large program then they cause move it to the background by using the & symbol at the end, and they can close the window but the installation will still be happening in the background therefore, the user can do other things and not stick to the same terminal window. Using the jobs command you can see if the process is completed to still in the duration of running.
+
+
+-----------------------------------------------------------------------------------------
+
+install <name> & - Run the job in the background.  
+prompt> sleep 100 &
+[1] 982
+prompt> jobs
+[1]+  Running                 sleep 100 &
+
+-----------------------------------------------------------------------------------------
+
+
+The Environment
+The shell would start in the directory where you would run the shell program from. The user can see the path such as which directory they are currently for example:
+
+/home/satatsudent/documents
+
+The users can use the commands cd to change the path if they wish to and the prompt will show the path changing therefore the user know which path they are at. An example, cd .. will mean:
+
+From
+
+/home/satatsudent/documents 
+
+To
+
+/home/satatsudent 
+
+Next to the [$HB689] – is where the user must type in their commands.   
+
